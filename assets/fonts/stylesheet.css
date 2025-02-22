@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'SUSE';
+    src: url('SUSE-Medium.eot');
+    src: url('SUSE-Medium.eot?#iefix') format('embedded-opentype'),
+        url('SUSE-Medium.woff2') format('woff2'),
+        url('SUSE-Medium.woff') format('woff'),
+        url('SUSE-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SUSE';
+    src: url('SUSE-Regular.eot');
+    src: url('SUSE-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SUSE-Regular.woff2') format('woff2'),
+        url('SUSE-Regular.woff') format('woff'),
+        url('SUSE-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SUSE';
+    src: url('SUSE-Thin.eot');
+    src: url('SUSE-Thin.eot?#iefix') format('embedded-opentype'),
+        url('SUSE-Thin.woff2') format('woff2'),
+        url('SUSE-Thin.woff') format('woff'),
+        url('SUSE-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SUSE';
+    src: url('SUSE-ExtraLight.eot');
+    src: url('SUSE-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('SUSE-ExtraLight.woff2') format('woff2'),
+        url('SUSE-ExtraLight.woff') format('woff'),
+        url('SUSE-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SUSE';
+    src: url('SUSE-Bold.eot');
+    src: url('SUSE-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SUSE-Bold.woff2') format('woff2'),
+        url('SUSE-Bold.woff') format('woff'),
+        url('SUSE-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SUSE';
+    src: url('SUSE-Light.eot');
+    src: url('SUSE-Light.eot?#iefix') format('embedded-opentype'),
+        url('SUSE-Light.woff2') format('woff2'),
+        url('SUSE-Light.woff') format('woff'),
+        url('SUSE-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bristol';
+    src: url('Bristol.eot');
+    src: url('Bristol.eot?#iefix') format('embedded-opentype'),
+        url('Bristol.woff2') format('woff2'),
+        url('Bristol.woff') format('woff'),
+        url('Bristol.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SUSE';
+    src: url('SUSE-ExtraBold.eot');
+    src: url('SUSE-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('SUSE-ExtraBold.woff2') format('woff2'),
+        url('SUSE-ExtraBold.woff') format('woff'),
+        url('SUSE-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SUSE';
+    src: url('SUSE-SemiBold.eot');
+    src: url('SUSE-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('SUSE-SemiBold.woff2') format('woff2'),
+        url('SUSE-SemiBold.woff') format('woff'),
+        url('SUSE-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
