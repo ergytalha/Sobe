@@ -19,28 +19,30 @@ This project is an example of a modern, responsive website that aims to promote 
 - **Swiper.js** - Slider and gallery animations.
 
 
-## Proje Dosya Yapısı
+## Project File Structure
 /sobe
 │
-├── index.html # Ana sayfa dosyası
+├── index.html # Home page file
 ├── assets/
-│ ├─── css/
+│ ├──── css/
 │ │ ├── bootstrap.min.css
 │ │ ├── swiper-bundle.min.css
-│ │ └── style.css # Özel stil dosyası
+│ │ └─── style.css # Custom style file
 │ ├── js/
 │ │ ├─ bootstrap.bundle.min.js
-│ │ ├── swiper-bundle.min.js
-│ │ └── main.js # Özel JavaScript dosyası
-│ ├── img/ # Görsel içerikler (slider, arka plan, vb.)
-│ └── icon/ # İkon ve simge dosyaları
+│ │ ├─ swiper-bundle.min.js
+│ │ └── main.js # Custom JavaScript file
+│ ├── img/ # Visual content (slider, background, etc.)
+│ └─── icon/ # Icon and icon files
 └── README.md                
 
-## Kurulum ve Çalıştırma
-- **Projeyi İndirin veya Klonlayın:** git clone https://github.com/kullaniciAdi/sobe-website.git
+## Installation and Operation
+- Download or Clone the project:** git clone https://github.com/kullaniciAdi/sobe-website.git
 
 ## Screenshots
 ![index.html](./assets/img/ss.png)
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+Translated with DeepL.com (free version)
