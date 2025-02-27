@@ -31,56 +31,37 @@ document.addEventListener("DOMContentLoaded", function () {
     let slides = document.querySelectorAll(".bagis-slide");
     const btnUp = document.getElementById("scroll-up");
     const btnDown = document.getElementById("scroll-down");
-  
-    // Aynı anda kaç slayt görünsün? (ör. 4)
-    // Orijinal slayt sayınız en az 4 olmalı!
     const visibleSlides = 4;
     let index = 0;
-  
-    // Orijinal slayt sayısı (klonlamadan önceki)
+
     const originalSlideCount = slides.length;
   
-    // 1) İlk "visibleSlides" kadar slaytı kopyala, slider'ın sonuna ekle
     for (let i = 0; i < visibleSlides; i++) {
-      // Her ihtimale karşı, i >= originalSlideCount olmamasına dikkat et.
       if (i < originalSlideCount) {
         const clone = slides[i].cloneNode(true);
         slider.appendChild(clone);
       }
     }
   
-    // Klonları ekledikten sonra slides listesini güncelle
     slides = document.querySelectorAll(".bagis-slide");
-  
-    // 2) Tek bir slaydın yüksekliğini hesaplayan fonksiyon
-    //    Margin-bottom varsa, bunu da eklemek isteyebilirsiniz.
     function getSlideHeight(slide) {
       const style = window.getComputedStyle(slide);
       const marginTop = parseFloat(style.marginTop);
       const marginBottom = parseFloat(style.marginBottom);
       return slide.offsetHeight + marginTop + marginBottom;
     }
-  
-    // Slider'ı güncelleme fonksiyonu
+
     function updateSlide(withTransition = true) {
-      // ilk slaydın yüksekliğini baz alıyoruz
       const singleSlideHeight = getSlideHeight(slides[0]);
-      // transition ayarla
       slider.style.transition = withTransition ? "transform 0.5s ease-in-out" : "none";
-      // translateY hesapla
       slider.style.transform = `translateY(-${index * singleSlideHeight}px)`;
     }
-  
-    // Transition bittikten sonra, eğer index orijinal slayt sayısını aştıysa sıfırla
     slider.addEventListener("transitionend", function () {
       if (index >= originalSlideCount) {
-        // En başa dön
         index = 0;
         updateSlide(false);
       }
     });
-  
-    // Butonlar
     btnDown.addEventListener("click", function () {
       index++;
       updateSlide();
@@ -91,21 +72,15 @@ document.addEventListener("DOMContentLoaded", function () {
         index--;
         updateSlide();
       } else {
-        // En baştaysak, ters yönde son orijinal slayda git
         index = originalSlideCount - 1;
         updateSlide(false);
-        // Biraz gecikmeyle animasyon
         setTimeout(() => updateSlide(), 20);
       }
     });
-  
-    // Otomatik geçiş (ör. 4 saniyede bir)
     setInterval(() => {
       index++;
       updateSlide();
     }, 4000);
-  
-    // 3) container yüksekliğini, "visibleSlides * tek slayt yüksekliği" olarak ayarla
     function setContainerHeight() {
       if (slides.length > 0) {
         const singleSlideHeight = getSlideHeight(slides[0]);
@@ -113,8 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
     setContainerHeight();
-  
-    // 4) Ekran boyutu değişince yeniden hesapla (responsive için)
     window.addEventListener("resize", () => {
       setContainerHeight();
       updateSlide(false);
@@ -131,26 +104,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnDown = document.getElementById("scroll-down");
   
     let index = 0;
-    const visibleSlides = 4; // Aynı anda gösterilecek slayt sayısı
+    const visibleSlides = 4; 
     const originalSlideCount = slides.length;
   
-    // İlk visibleSlides kadar olan slaytları kopyalayıp slider'ın sonuna ekle
     for (let i = 0; i < visibleSlides; i++) {
       const clone = slides[i].cloneNode(true);
       slider.appendChild(clone);
     }
-  
-    // Klon eklendikten sonra slides listesini güncelle
+
     slides = document.querySelectorAll(".bagis-slide");
   
-    // Slider'ı güncelleme fonksiyonu
     function updateSlide(withTransition = true) {
       const slideHeight = slides[0].offsetHeight;
       slider.style.transition = withTransition ? "transform 0.5s ease-in-out" : "none";
       slider.style.transform = `translateY(-${index * slideHeight}px)`;
     }
   
-    // Geçiş tamamlandığında, eğer index orijinal slaytların sonunu aşmışsa, index'i sıfırlayarak başa dön
     slider.addEventListener("transitionend", function () {
       if (index >= originalSlideCount) {
         index = 0;
@@ -158,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   
-    // Kaydırma butonları için event listener'lar
     if (btnUp && btnDown) {
       btnDown.addEventListener("click", function () {
         index++;
@@ -170,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
           index--;
           updateSlide();
         } else {
-          // Eğer ilk slayttayız, ters yönde geçiş için son orijinal slayta geçiş yap
           index = originalSlideCount - 1;
           updateSlide(false);
           setTimeout(() => {
@@ -181,14 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       console.error("Kaydırma butonları bulunamadı!");
     }
-  
-    // Otomatik geçiş (Her 4 saniyede bir)
     setInterval(() => {
       index++;
       updateSlide();
     }, 4000);
-  
-    // Slider konteynerinin yüksekliğini, görünür slayt sayısına göre ayarla
+
     const slideHeight = slides[0].offsetHeight;
     slider.style.height = `${slideHeight * visibleSlides}px`;
   });
@@ -234,7 +198,7 @@ var swiper = new Swiper(".news-swiper .swiper-container", {
     },
   },
   autoplay: {
-    delay: 3000, // 3 saniyede bir kaydır
+    delay: 3000, 
     disableOnInteraction: false,
   },
   grabCursor: true,
@@ -292,7 +256,7 @@ var blogSwiper = new Swiper(".blogSwiper", {
 
 var customThumbSwiper = new Swiper(".custom-thumb-slider", {
   spaceBetween: 10,
-  slidesPerView: 3, // Gözüken thumbnail sayısı
+  slidesPerView: 3, 
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
